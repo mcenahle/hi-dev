@@ -1,3 +1,5 @@
+@import url("https://cn-font.claude-code-best.win/packages/syst/dist/SourceHanSerifCN/result.css");
+
 html {
   -webkit-scrollbar-gutter: auto !important;
   scrollbar-gutter: auto !important;
@@ -69,7 +71,8 @@ dialog:not([open]) {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  font-family: serif;
+  font-family: "Source Han Serif CN VF", "Source Han Serif CN", serif;
+  line-height: 2rem;
 }
 
 .post-meta {
