@@ -1,0 +1,41 @@
+html {
+  -webkit-scrollbar-gutter: auto !important;
+  scrollbar-gutter: auto !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5rem;
+}
+
+.container {
+  margin: 20px auto;
+}
+
+footer {
+  margin-top: auto;
+  border-top: solid 0.5px black;
+  p {
+    line-height: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+p {
+  word-break: break-all;
+}
+
+a {
+  text-decoration: none;
+}
+
+dialog:not([open]) {
+  display: none;
+}
