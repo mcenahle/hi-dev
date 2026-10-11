@@ -1,0 +1,40 @@
+---
+import Navbar from "../../layouts/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const allPosts = Object.values(
+  import.meta.glob("./*.md", { eager: true }),
+).sort(
+  (a: any, b: any) =>
+    new Date(b.frontmatter.date).getTime() -
+    new Date(a.frontmatter.date).getTime(),
+);
+
+const title = "年终总结";
+---
+
+<meta charset="utf-8" />
+
+<Navbar />
+
+<Layout title="年终总结">
+  <h2 class="text-black">{title}</h2>
+
+  <p>来自我的年终总结！！</p>
+
+  <div class="list-group">
+    {
+      allPosts.map((post: any) => (
+        <a href={post.url} class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{post.frontmatter.title}</h5>
+            <small class="fg-2">{post.frontmatter.date}</small>
+          </div>
+          <p class="fg-2">作者：{post.frontmatter.author}</p>
+          <small class="fg-2">{post.frontmatter.description}</small>
+        </a>
+      ))
+    }
+  </div>
+</Layout>

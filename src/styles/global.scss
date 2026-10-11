@@ -61,3 +61,23 @@ a {
 dialog:not([open]) {
   display: none;
 }
+
+.article {
+  text-indent: 2em;
+  font-size: 18px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: serif;
+}
+
+.post-meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
