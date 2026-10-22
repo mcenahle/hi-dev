@@ -82,7 +82,7 @@ dialog:not([open]) {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
-  font-family: "Source Han Serif CN VF", "Source Han Serif CN", serif;
+  // font-family: "Source Han Serif CN VF", "Source Han Serif CN", serif;
   line-height: 2rem;
 }
 
@@ -95,4 +95,10 @@ dialog:not([open]) {
   color: #000000;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.annualpdfjs {
+  border: none;
+  width: 100%;
+  height: 400px;
 }

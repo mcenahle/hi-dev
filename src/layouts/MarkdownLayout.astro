@@ -24,8 +24,8 @@ const { frontmatter } = Astro.props;
     </ol>
   </nav>
 
-  <div class="panel panel-default">
-    <div class="page-heading" style="margin: 0 auto;">
+  <div class="row">
+    <div class="col-12 lg:col-8">
       <h2 style="text-align: center; font-size: 30px; margin-top: 30px;">
         {frontmatter.title}
       </h2>
@@ -40,19 +40,71 @@ const { frontmatter } = Astro.props;
           <Icon name="mdi:calendar" />&nbsp;
           {frontmatter.date}
         </span>
+
+        <div class="article">
+          <slot />
+        </div>
       </div>
     </div>
-    <div class="panel-body">
-      <div class="article">
-        <slot />
-        <a
-          class="theme-primary btn-solid btn-styled"
-          href="/annual/"
-          role="button"
-          style="text-indent: 0em;"
-          ><Icon name="mdi:arrow-left" /> 返回年终总结</a
-        >
+    <div class="col-12 lg:col-4">
+      <p>查看关联的 pdf 文件：</p>
+      <iframe class="annualpdfjs" src={frontmatter.pdfjs}></iframe>
+      <hr />
+      <div class="row">
+        <div class="col-12 lg:col-6">
+          <div class="d-grid gap-2">
+            <a
+              href={frontmatter.pdflink}
+              class="theme-accent btn-solid btn-styled"
+              style="margin-bottom: 6px;"
+            >
+              查看 pdf 源文件
+            </a>
+          </div>
+        </div>
+        <div class="col-12 lg:col-6">
+          <div class="d-grid gap-2">
+            <a
+              href="#"
+              class="theme-success btn-solid btn-styled"
+              data-bs-toggle="dialog"
+              data-bs-target="#pdfDownloadDialog"
+              style="margin-bottom: 12px;"
+            >
+              下载 pdf
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <a
+    class="theme-primary btn-solid btn-styled"
+    href="/annual/"
+    role="button"
+    style="text-indent: 0em;"><Icon name="mdi:arrow-left" /> 返回年终总结</a
+  >
+
+  <dialog class="dialog dialog-slide-down" id="pdfDownloadDialog">
+    <div class="dialog-header">
+      <h1 class="dialog-title">下载确认</h1>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="dialog"
+        aria-label="Close"></button>
+    </div>
+    <div class="dialog-body">这将直接在本页面中进行下载，是否继续？</div>
+    <div class="dialog-footer">
+      <button
+        type="button"
+        class="btn-solid theme-secondary"
+        data-bs-dismiss="dialog">取消</button
+      >
+      <a href={frontmatter.pdflink} download class="btn-solid theme-primary"
+        >下载</a
+      >
+    </div>
+  </dialog>
 </Layout>
