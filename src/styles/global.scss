@@ -60,16 +60,18 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 10px;
 }
 
-p {
-  word-break: break-all;
-}
-
 code {
   color: currentColor;
 }
 
 a {
   text-decoration: none;
+}
+
+button:focus,
+a:focus {
+  outline-offset: 0.25rem;
+  outline: 0.25rem solid #2491ff;
 }
 
 dialog:not([open]) {
