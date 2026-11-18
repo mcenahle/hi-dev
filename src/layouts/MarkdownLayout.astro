@@ -9,17 +9,21 @@ const { frontmatter } = Astro.props;
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="/">mcenahle 个人门户网站</a>
+        <a class="breadcrumb-link" href="/">
+          mcenahle 个人门户网站
+        </a>
       </li>
       <li class="breadcrumb-divider"></li>
       <li class="breadcrumb-item">
-        <a class="breadcrumb-link" href="/annual/">年终总结</a>
+        <a class="breadcrumb-link" href="/annual/">
+          年终总结
+        </a>
       </li>
       <li class="breadcrumb-divider"></li>
       <li class="breadcrumb-item" aria-current="page">
-        <a class="breadcrumb-link active" href="javascript:void(0)"
-          >{frontmatter.title}</a
-        >
+        <a class="breadcrumb-link active" href="javascript:void(0)">
+          {frontmatter.title}
+        </a>
       </li>
     </ol>
   </nav>
@@ -32,12 +36,14 @@ const { frontmatter } = Astro.props;
 
       <div class="post-meta">
         <span>
-          <Icon name="mdi:account-edit" />&nbsp;
+          <Icon name="mdi:account-edit" />
+          &nbsp;
           {frontmatter.author}
         </span>
 
         <span>
-          <Icon name="mdi:calendar" />&nbsp;
+          <Icon name="mdi:calendar" />
+          &nbsp;
           {frontmatter.date}
         </span>
 
@@ -83,28 +89,44 @@ const { frontmatter } = Astro.props;
     class="theme-primary btn-solid btn-styled"
     href="/annual/"
     role="button"
-    style="text-indent: 0em;"><Icon name="mdi:arrow-left" /> 返回年终总结</a
+    style="text-indent: 0em;"
   >
+    <Icon name="mdi:arrow-left" /> 返回年终总结
+  </a>
 
-  <dialog class="dialog dialog-slide-down" id="pdfDownloadDialog">
-    <div class="dialog-header">
-      <h1 class="dialog-title">下载确认</h1>
-      <button
-        type="button"
-        class="btn-close"
-        data-bs-dismiss="dialog"
-        aria-label="Close"></button>
-    </div>
-    <div class="dialog-body">这将直接在本页面中进行下载，是否继续？</div>
-    <div class="dialog-footer">
-      <button
-        type="button"
-        class="btn-solid theme-secondary"
-        data-bs-dismiss="dialog">取消</button
-      >
-      <a href={frontmatter.pdflink} download class="btn-solid theme-primary"
-        >下载</a
-      >
-    </div>
-  </dialog>
+  <liquid-glass interactive variant="clear" class="glass-dialog">
+    <dialog class="dialog dialog-slide-down" id="pdfDownloadDialog">
+      <div class="dialog-header">
+        <h1 class="dialog-title">下载确认</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="dialog"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="dialog-body">这将直接在本页面中进行下载，是否继续？</div>
+      <div class="dialog-footer">
+        <button
+          type="button"
+          class="btn-solid theme-secondary"
+          data-bs-dismiss="dialog"
+        >
+          取消
+        </button>
+        <a href={frontmatter.pdflink} download class="btn-solid theme-primary">
+          下载
+        </a>
+      </div>
+    </dialog>
+  </liquid-glass>
 </Layout>
+
+<style>
+  .glass-dialog {
+    dialog {
+      background: #5cd6ff59;
+      color: white;
+    }
+  }
+</style>

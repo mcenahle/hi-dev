@@ -2,48 +2,77 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<nav class="navbar md:navbar-expand fixed-top bg-1 fg-2">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">mcenahle 个人门户网站</a>
-    <button
-      class="btn-icon navbar-toggler"
-      type="button"
-      data-bs-toggle="drawer"
-      data-bs-target="#navbarText"
-      aria-controls="navbarText"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-      style="border: solid 1px #929292;"
-    >
-      <span class="navbar-toggler-icon" aria-hidden="true"></span>
-    </button>
-    <dialog
-      class="drawer drawer-end"
-      tabindex="-1"
-      id="navbarText"
-      aria-labelledby="navbarTextLabel"
-    >
-      <div class="drawer-header">
-        <h5 class="drawer-title" id="navbarTextLabel">mcenahle 个人门户网站</h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="drawer"
-          aria-label="Close"></button>
-      </div>
-      <div class="drawer-body">
-        <ul class="navbar-nav me-auto mb-2 md:mb-0">
-          <li class="nav-item">
-            <a class="nav-link" href="/annual/">年终总结</a>
-          </li>
-        </ul>
-        <span class="navbar-text">
-          <a href="https://www.shanghai.gov.cn" target="_blank">
-            <u>上海城市精神</u>&nbsp;
-            <Icon name="mdi:open-in-new" />
-          </a>：海纳百川、追求卓越、开明睿智、大气谦和。
-        </span>
-      </div>
-    </dialog>
-  </div>
-</nav>
+<liquid-glass interactive variant="clear" class="glass-navbar">
+  <nav class="navbar md:navbar-expand">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        mcenahle 个人门户网站
+      </a>
+      <button
+        class="btn-icon navbar-toggler"
+        type="button"
+        data-bs-toggle="drawer"
+        data-bs-target="#navbarText"
+        aria-controls="navbarText"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        style="border: solid 1px #929292;"
+      >
+        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+      <dialog
+        class="drawer drawer-end"
+        tabindex="-1"
+        id="navbarText"
+        aria-labelledby="navbarTextLabel"
+      >
+        <div class="drawer-header">
+          <h5 class="drawer-title" id="navbarTextLabel">
+            mcenahle 个人门户网站
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="drawer"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="drawer-body">
+          <ul class="navbar-nav me-auto mb-2 md:mb-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/annual/">
+                年终总结
+              </a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+            <a href="https://www.shanghai.gov.cn" target="_blank">
+              <u>上海城市精神</u>&nbsp;
+              <Icon name="mdi:open-in-new" />
+            </a>
+            ：海纳百川、追求卓越、开明睿智、大气谦和。
+          </span>
+        </div>
+      </dialog>
+    </div>
+  </nav>
+</liquid-glass>
+
+<style>
+  .glass-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+    display: block;
+  }
+
+  .glass-navbar .navbar {
+    background: transparent !important;
+  }
+
+  .drawer {
+    background: #d1a61657;
+  }
+</style>

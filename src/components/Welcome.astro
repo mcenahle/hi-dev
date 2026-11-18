@@ -2,14 +2,43 @@
 import { Icon } from "astro-icon/components";
 ---
 
-<h2>欢迎来到 <code>hi.mcenahle.page</code>！</h2>
+<h2>
+  欢迎来到 <code>hi.mcenahle.page</code>！
+</h2>
+
+<div class="glass-test">
+  <liquid-glass interactive variant="clear">
+    <div class="glass-content">🫧 Liquid Glass</div>
+  </liquid-glass>
+</div>
+
+<style>
+  .glass-test {
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #ff79c6, #8b5cf6, #38bdf8);
+  }
+
+  .glass-content {
+    padding: 20px 36px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+  }
+</style>
+
 <p>
-  我是一名安静的大专男生。个人爱好：计算机代码、医学知识和自己的闲暇生活。<a
-    href="/my/"><u>查看个人简介页</u> <Icon name="mdi:link" /></a
-  >
+  我是一名安静的大专男生。个人爱好：计算机代码、医学知识和自己的闲暇生活。
+  <a href="/my/">
+    <u>查看个人简介页</u> <Icon name="mdi:link" />
+  </a>
 </p>
 
-<p>你可以在下面找到我的所有的 <code>.mcenahle.page</code> 网站：</p>
+<p>
+  你可以在下面找到我的所有的 <code>.mcenahle.page</code> 网站：
+</p>
 
 <div class="table-responsive table-card">
   <table class="table table-striped">
@@ -24,71 +53,79 @@ import { Icon } from "astro-icon/components";
     <tbody>
       <tr>
         <th scope="row">主页网站</th>
-        <td
-          ><p class="fg-success">
+        <td>
+          <p class="fg-success">
             <Icon name="mdi:check" /> 运行中
-          </p></td
-        >
-        <td
-          >个人主页网站中，主要提供了我的自我介绍，电子邮件等等信息。如有必要时，可通过该方式与我取得联系。</td
-        >
+          </p>
+        </td>
+        <td>
+          个人主页网站中，主要提供了我的自我介绍，电子邮件等等信息。如有必要时，可通过该方式与我取得联系。
+        </td>
         <td>
           <div class="d-grid gap-2" style="cursor: not-allowed !important;">
             <a
               class="btn-solid btn-styled theme-primary disabled"
               href="/"
-              role="button">本网站</a
+              role="button"
             >
+              本网站
+            </a>
           </div>
         </td>
       </tr>
       <tr>
         <th scope="row">邮箱系统</th>
-        <td
-          ><p class="fg-success">
+        <td>
+          <p class="fg-success">
             <Icon name="mdi:check" /> 运行中
-          </p></td
-        >
-        <td
-          >邮箱系统用于接收 <code>hi@mcenahle.page</code> 的所有邮箱及其发件。</td
-        >
+          </p>
+        </td>
+        <td>
+          邮箱系统用于接收 <code>hi@mcenahle.page</code> 的所有邮箱及其发件。
+        </td>
         <td>
           <div class="d-grid gap-2">
             <a
               class="btn-solid btn-styled theme-primary"
               href="https://mail.mcenahle.page"
               target="_blank"
-              role="button">跳转 <Icon name="mdi:open-in-new" /></a
+              role="button"
             >
+              跳转 <Icon name="mdi:open-in-new" />
+            </a>
           </div>
         </td>
       </tr>
       <tr>
-        <th scope="row"
-          ><mark><Icon name="mdi:party-popper" /></mark> 博客网站</th
-        >
-        <td
-          ><p class="fg-success">
+        <th scope="row">
+          <mark>
+            <Icon name="mdi:party-popper" />
+          </mark>{" "}
+          博客网站
+        </th>
+        <td>
+          <p class="fg-success">
             <Icon name="mdi:check" /> 运行中
-          </p></td
-        >
-        <td
-          >个人主要发文平台。<a
-            href="#"
-            data-bs-toggle="dialog"
-            data-bs-target="#exampleDialog"
-            ><u>查看我的博客网站历史</u>&nbsp;
-            <Icon name="boxicons:cursor-click-filled" /></a
-          >。</td
-        >
+          </p>
+        </td>
+        <td>
+          个人主要发文平台。
+          <a href="#" data-bs-toggle="dialog" data-bs-target="#exampleDialog">
+            <u>查看我的博客网站历史</u>&nbsp;
+            <Icon name="boxicons:cursor-click-filled" />
+          </a>
+          。
+        </td>
         <td>
           <div class="d-grid gap-2">
             <a
               class="btn-solid btn-styled theme-primary"
               href="https://blog.mcenahle.page"
               target="_blank"
-              role="button">跳转 <Icon name="mdi:open-in-new" /></a
+              role="button"
             >
+              跳转 <Icon name="mdi:open-in-new" />
+            </a>
           </div>
         </td>
       </tr>
@@ -106,12 +143,11 @@ import { Icon } from "astro-icon/components";
       type="button"
       class="btn-close"
       data-bs-dismiss="dialog"
-      aria-label="Close"></button>
+      aria-label="Close"
+    ></button>
   </div>
   <div class="dialog-body">
-    <table
-      class="table table-bordered table-striped table-responsive text-center"
-    >
+    <table class="table table-bordered table-striped table-responsive text-center">
       <thead>
         <tr>
           <th>博客网站代数</th>
@@ -133,7 +169,8 @@ import { Icon } from "astro-icon/components";
               class="external-link"
               rel="noopener noreferrer"
               target="_blank"
-              ><u>链接</u>&nbsp;
+            >
+              <u>链接</u>&nbsp;
               <Icon name="mdi:open-in-new" />
             </a>
           </td>
@@ -170,9 +207,11 @@ import { Icon } from "astro-icon/components";
           class="external-link"
           rel="noopener noreferrer"
           target="_blank"
-          ><u>https://mcenahle.dev/posts/20261003/</u>&nbsp;
-          <Icon name="mdi:open-in-new" /></a
-        >。
+        >
+          <u>https://mcenahle.dev/posts/20261003/</u>&nbsp;
+          <Icon name="mdi:open-in-new" />
+        </a>
+        。
       </p>
     </div>
     <p>
@@ -181,25 +220,33 @@ import { Icon } from "astro-icon/components";
         href="https://blog.mcenahle.page"
         class="external-link"
         rel="noopener noreferrer"
-        target="_blank"><u>现行博客网站</u> <Icon name="mdi:open-in-new" /></a
-      >。
+        target="_blank"
+      >
+        <u>现行博客网站</u> <Icon name="mdi:open-in-new" />
+      </a>
+      。
     </p>
     <p>
       2026年8月25日起，开始建设，设计自己的博客网站主题（采用 Astro+Bootstrap 3
-      框架）。完成后，大概率用于现行博客网站。<a
+      框架）。完成后，大概率用于现行博客网站。
+      <a
         href="https://blog.mcenahle.dev"
         class="external-link"
         rel="noopener noreferrer"
         target="_blank"
-        ><u>查看开发中的博客网站主题</u> <Icon name="mdi:open-in-new" /></a
-      >。
+      >
+        <u>查看开发中的博客网站主题</u> <Icon name="mdi:open-in-new" />
+      </a>
+      。
     </p>
   </div>
   <div class="dialog-footer">
     <button
       type="button"
       class="btn-solid theme-primary btn-subtle"
-      data-bs-dismiss="dialog">关闭</button
+      data-bs-dismiss="dialog"
     >
+      关闭
+    </button>
   </div>
 </dialog>
