@@ -198,15 +198,24 @@ import { Icon } from "astro-icon/components";
         </tr>
       </tbody>
     </table>
-    <div class="alert theme-accent" role="alert" style="margin-bottom: 16px;">
+    <div
+      class="alert theme-accent flex-column align-items-stretch"
+      role="alert"
+      style="margin-bottom: 16px;"
+    >
+      <h4 class="alert-heading mb-2">
+        目前正在考虑导入之前的博客文章至现行博客网站。
+      </h4>
+      <hr class="my-3" />
       <p>
         由于 <code>mcenahle.cn(.org.cn)</code>&nbsp;
-        已被弃用，且静态化的思想，故之前的博客网站预览暂不可用。目前正在考虑导入之前的博客文章至现行博客网站。详见&nbsp;
+        已被弃用，且静态化的思想，故之前的博客网站预览暂不可用。详见&nbsp;
         <a
           href="https://mcenahle.dev/posts/20261003/"
           class="external-link"
           rel="noopener noreferrer"
           target="_blank"
+          style="word-break: break-word;"
         >
           <u>https://mcenahle.dev/posts/20261003/</u>&nbsp;
           <Icon name="mdi:open-in-new" />
