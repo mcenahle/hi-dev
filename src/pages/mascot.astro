@@ -1,0 +1,53 @@
+---
+import Navbar from "../layouts/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const title = "吉祥物";
+---
+
+<Layout title={title}>
+  <h2 class="text-black">{title}</h2>
+
+  <p>
+    本人将<mark>珠颈斑鸠</mark>作为{" "}
+    <a href="https://mcenahle.dev/ecosystem/" target="_blank">
+      <u>mcenahle 的生态系统</u>&nbsp;
+      <Icon name="mdi:open-in-new" />
+    </a>{" "}
+    的吉祥物。
+  </p>
+
+  <p>
+    珠颈斑鸠是我小时候最喜欢的鸟类，虽然没有老鹰的雄壮，但它靠着自己的“咕咕~”声，以及颈部的一圈珍珠样的纹理，获得了大部分人的喜爱。
+  </p>
+
+  <img src="/images/珠颈斑鸠-1.webp" alt="珠颈斑鸠-1" class="picture-1" />
+  <img src="/images/珠颈斑鸠-2.webp" alt="珠颈斑鸠-2" />
+
+  <p style="margin-top: var(--bs-paragraph-margin-bottom);">
+    图片摄于 2026 年 9 月 25 日
+    8:04；地点：上海市浦东新区中医药大学学生公寓园区。
+  </p>
+</Layout>
+
+<style>
+  img {
+    max-width: 400px;
+    justify-content: center;
+    place-items: center;
+  }
+
+  @media (width >= 1024px) {
+    .picture-1 {
+      margin-right: 8px;
+    }
+  }
+
+  @media (width <= 1024px) {
+    img {
+      margin-bottom: 8px;
+      max-width: 100%;
+    }
+  }
+</style>
