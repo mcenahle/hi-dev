@@ -7,42 +7,58 @@ import { Icon } from "astro-icon/components";
     <div class="row">
       <div class="col-12 lg:col-6">
         <p>
-          <Icon name="mdi:copyright" /> 2026 mcenahle. Proudly powered by Bootstrap,
-          made by <b>human</b>.
+          <Icon name="mdi:copyright" /> 2026 mcenahle. Proudly powered by
+          Bootstrap, made by <b>human</b>.
         </p>
         <p>
-          <Icon name="mdi:camera" /> 背景图片拍摄地：上海市崇明区城桥镇南门长江大堤。
+          <Icon name="mdi:camera" />{" "}
+          背景图片拍摄地：上海市崇明区城桥镇南门长江大堤。
         </p>
         <p>
-          <Icon name="mdi:location" /> 个人住址：上海市崇明区，<a
+          <Icon name="mdi:location" /> 个人住址：上海市崇明区，
+          <a
             href="https://student.shutcm.edu.cn/2024/0828/c4563a161847/page.htm"
             target="_blank"
           >
             <u>上海市浦东新区中医药大学学生公寓</u>&nbsp;
             <Icon name="mdi:open-in-new" />
-          </a>。
+          </a>
+          。
         </p>
       </div>
       <div class="col-12 lg:col-6">
         <p>
-          <Icon name="mdi:email-arrow-right" /> 电子邮件地址：
-          <a href="mailto:hi@mcenahle.page" target="_blank">
-            <u>hi@mcenahle.page</u>&nbsp;
-            <Icon name="mdi:open-in-new" />
+          <Icon name="mdi:email-arrow-right" /> 电子邮件地址（
+          <span style="color: red;">如有骚扰的，列入全局黑名单。</span>
+          <a href="/mail-blacklist/">
+            <u>查询</u>
+          </a>
+          ）
+          <a
+            href="mailto:hi@mcenahle.page"
+            target="_blank"
+            type="button"
+            class="theme-info btn-solid btn-styled btn-sm"
+            style="color: white;"
+          >
+            给我发送电子邮件
           </a>
         </p>
         <p>
           <Icon name="mdi:computer" /> 个人开发人员主站：
           <a href="https://mcenahle.dev" target="_blank">
-            <u>https://mcenahle.<i>dev</i></u>&nbsp;
+            <u>
+              https://mcenahle.<i>dev</i>
+            </u>
+            &nbsp;
             <Icon name="mdi:open-in-new" />
           </a>
         </p>
         <p>
-          <Icon name="mdi:key-variant" /> SSH Key: <code
-            style="user-select: all;"
-            >4LlkGj+uV8LjbOYgvmWoGna8dUtnSepaClrVkjEZWfU</code
-          >
+          <Icon name="mdi:key-variant" /> SSH Key:{" "}
+          <code style="user-select: all;">
+            4LlkGj+uV8LjbOYgvmWoGna8dUtnSepaClrVkjEZWfU
+          </code>
         </p>
       </div>
     </div>
