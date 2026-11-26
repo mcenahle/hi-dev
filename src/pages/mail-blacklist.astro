@@ -1,0 +1,58 @@
+---
+import Navbar from "../layouts/Navbar.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+
+const title = "电子邮件全局黑名单";
+---
+
+<Layout title={title}>
+  <h2 class="text-black">{title}</h2>
+  <p>封禁策略举例详表：</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">发件人</th>
+        <th scope="col">处理结果</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>tom@example.com</td>
+        <td style="color: red;">
+          <Icon name="mdi:email-remove" /> 拒绝
+        </td>
+      </tr>
+      <tr>
+        <td>tom@mail.example.com</td>
+        <td style="color: red;">
+          <Icon name="mdi:email-remove" /> 拒绝
+        </td>
+      </tr>
+      <tr>
+        <td>tom@EXAMPLE.COM</td>
+        <td style="color: rgb(40, 151, 230);">
+          <Icon name="mdi:email-check" /> 允许
+        </td>
+      </tr>
+      <tr>
+        <td>tom@notexample.com</td>
+        <td style="color: rgb(40, 151, 230);">
+          <Icon name="mdi:email-check" /> 允许
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p>由于拒绝营销类电子邮件，故本人封禁以下电子邮件地址：</p>
+  <ul>
+    <li>nexorisedigital.online</li>
+    <li>neuralsparkai.online</li>
+  </ul>
+</Layout>
+
+<style>
+  th,
+  td {
+    background-color: transparent;
+  }
+</style>
